@@ -68,7 +68,7 @@ body{
   color:black;
  }
  .s{
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
  }
  .s:hover{
   transform: scale(1.1)!important;
@@ -83,10 +83,23 @@ body{
   color: white;
   margin-top: 4px;
  }
- .nav-item:hover{
-  background-color:rgba(0, 0, 255, 0.271);
+ 
+ .k{
+  position: relative;
+  cursor: pointer;
+ }
+ .k:after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width:100%;
+  height:2px;
+  background-color: black;
+  transform:scaleX(0);
+  transition: 1s;
+}
+.k:hover::after{
+  transform: scale(1);
   
- }
- .nav-link:hover{
-  color:blue;
- }
+}
